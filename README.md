@@ -32,15 +32,7 @@ This project simulates a real-world supply chain analytics use case for a beauty
 ```
 supply-chain-health-monitor/
 │
-├── sql/
-│   ├── 1_inventory_health.sql
-│   ├── 2_supplier_performance.sql
-│   ├── 3_revenue_profitability.sql
-│   ├── 4_shipping_logistics.sql
-│   └── 5_defect_quality_risk.sql
-│
 ├── data/
-│   ├── supply_chain_clean.csv               ← raw dataset
 │   ├── 1_Inventory_Health.csv
 │   ├── 2_Supplier_Performance_Scorecard.csv
 │   ├── 2_Supplier_Performance_Scorecard_2.csv
@@ -49,7 +41,16 @@ supply-chain-health-monitor/
 │   ├── 4_Shipping_Logistics_1.csv
 │   ├── 4_Shipping_Logistics_2.csv
 │   ├── 5_Defect_Quality_Risk_1.csv
-│   └── 5_Defect_Quality_Risk_2.csv
+│   ├── 5_Defect_Quality_Risk_2.csv
+│   └──supply_chain_clean.csv               ← raw dataset
+├── screenshots/
+│   └── (3 png files)
+├── sql/
+│   ├── 1_inventory_health.sql
+│   ├── 2_supplier_performance.sql
+│   ├── 3_revenue_profitability.sql
+│   ├── 4_shipping_logistics.sql
+│   └── 5_defect_quality_risk.sql
 │
 └── README.md
 ```
