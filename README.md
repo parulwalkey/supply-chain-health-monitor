@@ -62,6 +62,8 @@ supply-chain-health-monitor/
 
 Provides a high-level summary of business performance across revenue, profitability, inventory health, and inspection quality.
 
+![Executive Overview Dashboard](screenshots/page1_executive_overview.png)
+
 **KPIs:**
 | Metric | Value |
 |---|---|
@@ -83,6 +85,8 @@ Provides a high-level summary of business performance across revenue, profitabil
 ### Page 2 — Supplier Risk Scorecard
 
 Evaluates all 5 suppliers across defect rates, inspection pass rates, and delivery delays to identify high-risk partners.
+
+![Supplier Risk Scorecard](screenshots/page2_supplier_risk.png)
 
 **KPIs:**
 | Metric | Value |
@@ -116,6 +120,8 @@ Evaluates all 5 suppliers across defect rates, inspection pass rates, and delive
 ### Page 3 — Inventory & Reorder Analyzer
 
 Identifies stock health across product types, surfaces the most understocked SKUs, and compares shipping route and carrier costs.
+
+![Inventory and Reorder Analyzer](screenshots/page3_inventory_reorder.png)
 
 **KPIs:**
 | Metric | Value |
