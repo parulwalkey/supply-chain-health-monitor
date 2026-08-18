@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI-assisted supplier risk decision support built on deterministic supply-chain metrics." />
+  <title>Supplier Intelligence Copilot</title>
+  <link rel="stylesheet" href="./app.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <span class="eyebrow">AI-assisted decision support</span>
+        <h1>Supplier Intelligence Copilot</h1>
+        <p>Converts trusted supplier-performance metrics into grounded risk explanations and recommended investigation actions — while keeping sourcing decisions human-controlled.</p>
+      </div>
+      <div class="hero-links">
+        <a href="https://public.tableau.com/views/InventorySupplyChainHealthMonitoringStory/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noreferrer">View Tableau</a>
+        <a href="#how-it-works">How it works</a>
+      </div>
+    </header>
+
+    <section class="panel controls">
+      <label>Supplier<select id="supplierSelect"></select></label>
+      <div>
+        <span class="section-label">Aggregated Supplier Risk</span>
+        <span id="riskTier" class="risk">—</span>
+        <small>Deterministic: supplier average defect rate</small>
+      </div>
+    </section>
+
+    <section class="grid three">
+      <article class="panel">
+        <span class="section-label">Quality</span>
+        <div id="qualityMetrics" class="metric-grid"></div>
+      </article>
+      <article class="panel">
+        <span class="section-label">Delivery</span>
+        <div id="deliveryMetrics" class="metric-grid"></div>
+      </article>
+      <article class="panel">
+        <span class="section-label">Inventory</span>
+        <div id="inventoryMetrics" class="metric-grid"></div>
+      </article>
+    </section>
+
+    <section class="panel copilot">
+      <div class="copilot-head">
+        <div>
+          <span class="section-label">AI Risk Brief</span>
+          <h2>Turn metrics into a decision-ready summary</h2>
+        </div>
+        <button id="generateButton">Generate AI Risk Brief</button>
+      </div>
+      <div id="errorBox" class="error hidden"></div>
+      <div id="briefArea" class="placeholder">The model receives only the trusted context shown above. It cannot change the deterministic risk tier.</div>
+    </section>
+
+    <section class="panel architecture" id="how-it-works">
+      <span class="section-label">How it works</span>
+      <div class="flow"><span>SCM Dataset</span><b>→</b><span>Deterministic Metrics & Risk</span><b>→</b><span>Trusted Context</span><b>→</b><span>LLM</span><b>→</b><span>Human Decision</span></div>
+      <p class="muted">The LLM explains and recommends; it does not calculate the official supplier risk tier or execute sourcing actions.</p>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
