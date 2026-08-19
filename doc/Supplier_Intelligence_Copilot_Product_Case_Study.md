@@ -170,7 +170,8 @@ To be clear: the AI layer doesn't replace the analytics underneath it. It just c
 
 ## 9. How the System Is Put Together
 
-![Supplier Intelligence Copilot Architecture](./supplier-copilot-architecture.png)
+<img width="1718" height="2363" alt="supplier-copilot-architecture" src="https://github.com/user-attachments/assets/edd583f4-0042-4d01-b82c-e68c320b2d2c" />
+
 
 The whole design hinges on keeping three things separate: deterministic calculations, AI interpretation, and human decision-making. They don't get to blur into each other.
 
