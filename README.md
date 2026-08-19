@@ -4,7 +4,6 @@ An AI-assisted supplier risk decision-support prototype that combines **determin
 
 🔗 **[View Live Demo](https://supplier-intelligence-copilot.netlify.app)**  
 📊 **[Original Analytics Project](https://public.tableau.com/views/InventorySupplyChainHealthMonitoringStory/Story1)**  
-💻 **[GitHub — Supply Chain Health Monitor](https://github.com/parulwalkey/supply-chain-health-monitor)**
 
 ---
 
