@@ -88,6 +88,30 @@ The LLM is **not the source of truth.** The cleaned supply chain dataset and det
 
 ---
 
+## System Architecture
+
+The Supplier Intelligence Copilot separates deterministic analytics from AI-based interpretation.
+
+**Flow:**
+User → Web UI → Deterministic Analytics → Trusted Supplier Context → Netlify Function → LLM → Human Review
+
+- Deterministic logic calculates supplier-level metrics and risk.
+- The LLM receives only trusted supplier context.
+- The model returns structured output for summary, evidence, healthy signals, and recommended actions.
+- Final decisions remain human-controlled.
+
+![Supplier Intelligence Copilot Architecture](docs/supplier-copilot-architecture.png)
+
+---
+
+## 🔄 Before vs AI-Assisted Workflow
+
+![Before vs AI-Assisted Supplier Decision Workflow](docs/before-after-workflow.png)
+
+The AI layer does not replace the analytical foundation. It reduces the time and effort required to move from supplier data to interpretation and next-step recommendations.
+
+---
+
 ## 📐 Risk Scoring Logic
 
 ### SKU-Level Quality Risk (from original dataset)
@@ -201,21 +225,7 @@ The Copilot is instructed to:
 - Require human review before consequential decisions
 
 ---
-## Architecture
 
-The Supplier Intelligence Copilot separates deterministic analytics from AI-based interpretation.
-
-**Flow:**
-User → Web UI → Deterministic Analytics → Trusted Supplier Context → Netlify Function → LLM → Human Review
-
-- Deterministic logic calculates supplier-level metrics and risk.
-- The LLM receives only trusted supplier context.
-- The model returns structured output for summary, evidence, healthy signals, and recommended actions.
-- Final decisions remain human-controlled.
-
-<img width="1718" height="2363" alt="supplier-copilot-architecture" src="https://github.com/user-attachments/assets/37accf86-378f-4131-97dd-fd37a1581e35" />
-
----
 ## 🔍 Example — Supplier 5 Analysis
 
 For Supplier 5, the deterministic system identifies:
