@@ -105,9 +105,9 @@ The same thresholds are applied to each supplier's **aggregated average defect r
 | Supplier | Avg Defect Rate | Risk Tier |
 |---|---|---|
 | Supplier 1 | 1.80% | Low Risk |
-| Supplier 2 | 2.36% | Medium Risk |
-| Supplier 3 | 2.47% | Medium Risk |
-| Supplier 4 | 2.34% | Medium Risk |
+| Supplier 2 | 2.36% | Low Risk |
+| Supplier 3 | 2.47% | Low Risk |
+| Supplier 4 | 2.34% | Low Risk |
 | Supplier 5 | 2.67% | Medium Risk |
 
 The LLM is instructed to **repeat the deterministic risk tier exactly** rather than calculate its own risk classification.
