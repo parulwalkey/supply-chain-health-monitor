@@ -201,7 +201,21 @@ The Copilot is instructed to:
 - Require human review before consequential decisions
 
 ---
+## Architecture
 
+The Supplier Intelligence Copilot separates deterministic analytics from AI-based interpretation.
+
+**Flow:**
+User → Web UI → Deterministic Analytics → Trusted Supplier Context → Netlify Function → LLM → Human Review
+
+- Deterministic logic calculates supplier-level metrics and risk.
+- The LLM receives only trusted supplier context.
+- The model returns structured output for summary, evidence, healthy signals, and recommended actions.
+- Final decisions remain human-controlled.
+
+<img width="1718" height="2363" alt="supplier-copilot-architecture" src="https://github.com/user-attachments/assets/37accf86-378f-4131-97dd-fd37a1581e35" />
+
+---
 ## 🔍 Example — Supplier 5 Analysis
 
 For Supplier 5, the deterministic system identifies:
