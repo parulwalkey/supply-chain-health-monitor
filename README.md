@@ -100,13 +100,13 @@ User → Web UI → Deterministic Analytics → Trusted Supplier Context → Net
 - The model returns structured output for summary, evidence, healthy signals, and recommended actions.
 - Final decisions remain human-controlled.
 
-![Supplier Intelligence Copilot Architecture](docs/supplier-copilot-architecture.png)
+![Supplier Intelligence Copilot Architecture](doc/supplier-copilot-architecture.png)
 
 ---
 
 ## 🔄 Before vs AI-Assisted Workflow
 
-![Before vs AI-Assisted Supplier Decision Workflow](docs/before-after-workflow.png)
+![Before vs AI-Assisted Supplier Decision Workflow](doc/before-after-workflow.png)
 
 The AI layer does not replace the analytical foundation. It reduces the time and effort required to move from supplier data to interpretation and next-step recommendations.
 
