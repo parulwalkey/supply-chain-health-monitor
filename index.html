@@ -5,64 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="AI-assisted supplier risk decision support built on deterministic supply-chain metrics." />
   <title>Supplier Intelligence Copilot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./app.css" />
 </head>
 <body>
-  <main class="shell">
-    <header class="hero">
-      <div>
-        <span class="eyebrow">AI-assisted decision support</span>
-        <h1>Supplier Intelligence Copilot</h1>
-        <p>Converts trusted supplier-performance metrics into grounded risk explanations and recommended investigation actions — while keeping sourcing decisions human-controlled.</p>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="wordmark" href="#top">Supplier Intelligence Copilot</a>
+      <div class="nav-actions">
+        <a href="#product">Product</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="https://app.notion.com/p/7-Technical-Architecture-3e1d02e1221d801fa287d18869d9af95?source=copy_link" target="_blank" rel="noreferrer">Architecture</a>
+        <a href="https://github.com/parulwalkey/supply-chain-health-monitor" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="nav-cta" href="./copilot.html">Try the Copilot</a>
       </div>
-      <div class="hero-links">
-        <a href="https://public.tableau.com/views/InventorySupplyChainHealthMonitoringStory/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noreferrer">View Tableau</a>
-        <a href="#how-it-works">How it works</a>
-      </div>
-    </header>
+    </nav>
+  </header>
 
-    <section class="panel controls">
-      <label>Supplier<select id="supplierSelect"></select></label>
-      <div>
-        <span class="section-label">Aggregated Supplier Risk</span>
-        <span id="riskTier" class="risk">—</span>
-        <small>Deterministic: supplier average defect rate</small>
-      </div>
-    </section>
-
-    <section class="grid three">
-      <article class="panel">
-        <span class="section-label">Quality</span>
-        <div id="qualityMetrics" class="metric-grid"></div>
-      </article>
-      <article class="panel">
-        <span class="section-label">Delivery</span>
-        <div id="deliveryMetrics" class="metric-grid"></div>
-      </article>
-      <article class="panel">
-        <span class="section-label">Inventory</span>
-        <div id="inventoryMetrics" class="metric-grid"></div>
-      </article>
-    </section>
-
-    <section class="panel copilot">
-      <div class="copilot-head">
-        <div>
-          <span class="section-label">AI Risk Brief</span>
-          <h2>Turn metrics into a decision-ready summary</h2>
+  <main>
+    <section class="product-hero" id="top" aria-labelledby="product-title">
+      <div class="hero-inner">
+        <span class="eyebrow">AI Procurement Intelligence</span>
+        <h1 id="product-title">Know which suppliers need attention, and why.</h1>
+        <p>Turn supplier quality, delivery, inventory, and exposure data into explainable risk insights and AI-assisted recommendations.</p>
+        <div class="hero-ctas">
+          <a class="primary-cta" href="./copilot.html">Try the Copilot</a>
+          <a class="secondary-cta" href="https://app.notion.com/p/7-Technical-Architecture-3e1d02e1221d801fa287d18869d9af95?source=copy_link" target="_blank" rel="noreferrer">View Architecture →</a>
         </div>
-        <button id="generateButton">Generate AI Risk Brief</button>
       </div>
-      <div id="errorBox" class="error hidden"></div>
-      <div id="briefArea" class="placeholder">The model receives only the trusted context shown above. It cannot change the deterministic risk tier.</div>
     </section>
 
-    <section class="panel architecture" id="how-it-works">
-      <span class="section-label">How it works</span>
-      <div class="flow"><span>SCM Dataset</span><b>→</b><span>Deterministic Metrics & Risk</span><b>→</b><span>Trusted Context</span><b>→</b><span>LLM</span><b>→</b><span>Human Decision</span></div>
-      <p class="muted">The LLM explains and recommends; it does not calculate the official supplier risk tier or execute sourcing actions.</p>
+    <section class="product-context" id="product" aria-labelledby="product-context-title">
+      <div class="product-context-inner">
+        <div class="product-context-heading">
+          <span class="eyebrow">Built for Procurement Decisions</span>
+          <h2 id="product-context-title">Understand what deserves attention next.</h2>
+        </div>
+        <p class="product-context-summary">Supplier dashboards tell you what happened. The Copilot brings separate operational signals into one supplier view to explain the key drivers and next steps.</p>
+
+        <ol class="product-model" aria-label="Three-step product model">
+          <li>
+            <span class="step-number" aria-hidden="true">01</span>
+            <h3>MEASURE</h3>
+            <p>Bring quality, delivery, inventory, and exposure signals together.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">02</span>
+            <h3>CLASSIFY</h3>
+            <p>Apply transparent risk rules with consistent outcomes.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">03</span>
+            <h3>EXPLAIN</h3>
+            <p>Use AI to highlight risk drivers and recommended next steps.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="landing-how" id="how-it-works" aria-labelledby="how-title">
+      <div class="landing-how-inner">
+        <span class="eyebrow">How It Works</span>
+        <h2 id="how-title">
+          <span>Deterministic logic sets the risk tier.</span>
+          <span>AI explains the evidence.</span>
+        </h2>
+        <p>AI interprets the operational context without changing the official risk tier.</p>
+        <ol class="process-flow" aria-label="Product workflow">
+          <li>
+            <span class="step-number" aria-hidden="true">01</span>
+            <span>Supplier Data</span>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">02</span>
+            <span>Operational Metrics</span>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">03</span>
+            <span>Risk Classification</span>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">04</span>
+            <span>AI Risk Brief</span>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">05</span>
+            <span>Human Review</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="artifacts-section" aria-labelledby="artifacts-title">
+      <div class="artifacts-inner">
+        <div class="section-copy">
+          <span class="eyebrow">Explore the Build</span>
+          <h2 id="artifacts-title">Go deeper into the product and architecture.</h2>
+        </div>
+        <div class="artifact-links">
+          <article class="artifact-panel">
+            <h3>Technical Architecture</h3>
+            <p>See how the data, risk logic, AI interpretation, and human review fit together.</p>
+            <a href="https://app.notion.com/p/7-Technical-Architecture-3e1d02e1221d801fa287d18869d9af95?source=copy_link" target="_blank" rel="noreferrer">Technical Architecture →</a>
+          </article>
+          <article class="artifact-panel">
+            <h3>Source Code</h3>
+            <p>Explore the implementation, data pipeline, and project documentation.</p>
+            <a href="https://github.com/parulwalkey/supply-chain-health-monitor" target="_blank" rel="noreferrer">GitHub →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-cta-title">
+      <div class="final-cta-inner">
+        <span class="eyebrow">Try the Workspace</span>
+        <h2 id="final-cta-title">See the Copilot in action.</h2>
+        <p>Explore a supplier and generate an AI-assisted risk brief.</p>
+        <div class="hero-ctas">
+          <a class="primary-cta" href="./copilot.html">Try the Copilot</a>
+        </div>
+      </div>
     </section>
   </main>
-  <script type="module" src="./app.js"></script>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div>
+        <strong>Supplier Intelligence Copilot</strong>
+        <span>AI-assisted supplier decision support</span>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="https://github.com/parulwalkey/supply-chain-health-monitor" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://app.notion.com/p/7-Technical-Architecture-3e1d02e1221d801fa287d18869d9af95?source=copy_link" target="_blank" rel="noreferrer">Architecture</a>
+        <a href="#top">Back to top</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
