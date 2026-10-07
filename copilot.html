@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Supplier Intelligence Copilot workspace for AI-assisted supplier risk analysis." />
+  <title>Supplier Intelligence Copilot Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./app.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav copilot-nav" aria-label="Copilot navigation">
+      <a class="wordmark" href="./copilot.html">Supplier Intelligence Copilot</a>
+      <div class="nav-actions">
+        <a href="./index.html#product">Back to Product</a>
+        <a href="https://app.notion.com/p/7-Technical-Architecture-3e1d02e1221d801fa287d18869d9af95?source=copy_link" target="_blank" rel="noreferrer">Architecture</a>
+        <a href="https://github.com/parulwalkey/supply-chain-health-monitor" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="shell copilot-shell" id="copilot-workspace" aria-labelledby="workspace-title">
+      <header class="app-intro">
+        <span class="eyebrow">Supplier Analysis Workspace</span>
+        <h1 id="workspace-title">Supplier Intelligence Copilot</h1>
+        <p>Explore supplier performance signals and generate an AI-assisted risk brief grounded in deterministic operational metrics.</p>
+      </header>
+
+      <section class="panel controls">
+        <label>Supplier<select id="supplierSelect"></select></label>
+        <div>
+          <span class="section-label">Aggregated Supplier Risk</span>
+          <span id="riskTier" class="risk">—</span>
+          <small>Deterministic: supplier average defect rate</small>
+        </div>
+      </section>
+
+      <section class="grid three">
+        <article class="panel">
+          <span class="section-label">Quality</span>
+          <div id="qualityMetrics" class="metric-grid"></div>
+        </article>
+        <article class="panel">
+          <span class="section-label">Delivery</span>
+          <div id="deliveryMetrics" class="metric-grid"></div>
+        </article>
+        <article class="panel">
+          <span class="section-label">Inventory</span>
+          <div id="inventoryMetrics" class="metric-grid"></div>
+        </article>
+      </section>
+
+      <section class="panel copilot">
+        <div class="copilot-head">
+          <div>
+            <span class="section-label">AI Risk Brief</span>
+            <h2>Turn metrics into a decision-ready summary</h2>
+          </div>
+          <button id="generateButton">Generate AI Risk Brief</button>
+        </div>
+        <div id="errorBox" class="error hidden"></div>
+        <div id="briefArea" class="placeholder">The model receives only the trusted context shown above. It cannot change the deterministic risk tier.</div>
+      </section>
+
+      <section class="panel architecture" id="how-it-works">
+        <span class="section-label">How it works</span>
+        <div class="flow"><span>SCM Dataset</span><b>→</b><span>Deterministic Metrics & Risk</span><b>→</b><span>Trusted Context</span><b>→</b><span>LLM</span><b>→</b><span>Human Decision</span></div>
+        <p class="muted">The LLM explains and recommends; it does not calculate the official supplier risk tier or execute sourcing actions.</p>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
